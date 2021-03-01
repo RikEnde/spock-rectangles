@@ -22,4 +22,5 @@ A adjacent to B: false
 
 # Known issues:
 
-I had to time box this. The points of intersection are not reported. 
+I had to time box this. Known bugs and missing features:
+- The points of intersection are not reported.

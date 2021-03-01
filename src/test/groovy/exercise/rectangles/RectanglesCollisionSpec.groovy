@@ -52,8 +52,8 @@ class RectanglesCollisionSpec extends Specification {
         "A left of B - NO" | new Rectangle(new Point(1, 5), new Point(3, 3)) | new Rectangle(new Point(4, 4), new Point(6, 2)) | false
         "B left of A - NO" | new Rectangle(new Point(4, 4), new Point(6, 2)) | new Rectangle(new Point(1, 5), new Point(3, 3)) | false
 
-        "A above B - NO" | new Rectangle(new Point(1, 5), new Point(5, 1)) | new Rectangle(new Point(2, 4), new Point(6, 6)) | false
-        "B above A - NO" | new Rectangle(new Point(2, 4), new Point(6, 6)) | new Rectangle(new Point(1, 5), new Point(5, 1)) | false
+        "A above B - NO" | new Rectangle(new Point(1, 5), new Point(5, 1)) | new Rectangle(new Point(2, 8), new Point(6, 6)) | false
+        "B above A - NO" | new Rectangle(new Point(2, 8), new Point(6, 6)) | new Rectangle(new Point(1, 5), new Point(5, 1)) | false
 
         "B inside A" | new Rectangle(new Point(1, 6), new Point(6, 1)) | new Rectangle(new Point(2, 5), new Point(5, 2)) | true
         "A inside B - NO" | new Rectangle(new Point(2, 5), new Point(5, 2)) | new Rectangle(new Point(1, 6), new Point(6, 1)) | false
@@ -78,8 +78,8 @@ class RectanglesCollisionSpec extends Specification {
         "A left of B - NO" | new Rectangle(new Point(1, 5), new Point(3, 3)) | new Rectangle(new Point(4, 4), new Point(6, 2)) | false
         "B left of A - NO" | new Rectangle(new Point(4, 4), new Point(6, 2)) | new Rectangle(new Point(1, 5), new Point(3, 3)) | false
 
-        "A above B - NO" | new Rectangle(new Point(1, 5), new Point(5, 1)) | new Rectangle(new Point(2, 4), new Point(6, 6)) | false
-        "B above A - NO" | new Rectangle(new Point(2, 4), new Point(6, 6)) | new Rectangle(new Point(1, 5), new Point(5, 1)) | false
+        "A below B - NO" | new Rectangle(new Point(1, 5), new Point(5, 1)) | new Rectangle(new Point(2, 8), new Point(6, 6)) | false
+        "B below A - NO" | new Rectangle(new Point(2, 8), new Point(6, 6)) | new Rectangle(new Point(1, 5), new Point(5, 1)) | false
 
         "B inside A - NO" | new Rectangle(new Point(1, 6), new Point(6, 1)) | new Rectangle(new Point(2, 5), new Point(5, 2)) | false
         "A inside B - NO" | new Rectangle(new Point(2, 5), new Point(5, 2)) | new Rectangle(new Point(1, 6), new Point(6, 1)) | false

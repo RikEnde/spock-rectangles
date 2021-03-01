@@ -7,6 +7,9 @@ public class Rectangle {
     final Point bottomRight;
 
     public Rectangle(Point topLeft, Point bottomRight) {
+        if (topLeft.x >= bottomRight.x || topLeft.y <= bottomRight.y) {
+            throw new IllegalArgumentException("Top left coord must be top left of bottom right coord");
+        }
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
     }

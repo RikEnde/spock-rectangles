@@ -40,4 +40,17 @@ class RectanglesApplicationSpec extends Specification {
         ",,"    | IllegalArgumentException | 'Not a point: ,,'
         "a,b"   | NumberFormatException    | 'For input string: "a"'
     }
+
+    def "Invalid rectangle throws exception"() {
+        when:
+        def rect = new Rectangle(topLeft, bottomRight)
+
+        then:
+        def error = thrown(expectedException)
+
+        where:
+        topLeft | bottomRight   | expectedException
+        new Point(0, 0) | new Point(5, 5) | IllegalArgumentException
+        new Point(0, 0) | new Point(0, 0) | IllegalArgumentException
+    }
 }
